@@ -23,3 +23,15 @@ py manage.py test
 
 create Requirements file:
 pip3 freeze > requirements.txt
+
+Git commands:
+git add -A
+git commit -m "Added files and changes required for deployment to heroku"
+git push origin master
+
+Create and upload the website to Heroku:
+heroku create
+git push heroku master
+heroku run python manage.py migrate
+heroku run python manage.py createsuperuser
+heroku open
