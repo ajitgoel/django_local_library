@@ -35,3 +35,17 @@ git push heroku master
 heroku run python manage.py migrate
 heroku run python manage.py createsuperuser
 heroku open
+
+Managing addons:
+heroku addons
+heroku addons:open heroku-postgresql
+
+Setting configuration variables:
+heroku config
+
+Debugging Section
+heroku logs # Show current logs
+heroku logs --tail # Show current logs and keep updating with any new results
+# Add additional logging for collectstatic (this tool is run automatically during a build)
+heroku config:set DEBUG_COLLECTSTATIC=1
+heroku ps # Display dyno status
