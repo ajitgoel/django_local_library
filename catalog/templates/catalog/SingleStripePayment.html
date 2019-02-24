@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<h2>Buy for $5.00</h2>
+<form action="{% url 'singlestripecharge' %}" method="post">
+    {% csrf_token %}
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{key}}"
+        data-description="A Django Charge" data-amount="500" data-locale="auto">
+    </script>
+  </form>
+{% endblock %}

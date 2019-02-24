@@ -1,0 +1,22 @@
+cd django-projects
+cd locallibrary
+
+using a virtual environment:
+workon my_django_environment
+deactivate 
+
+Running database migrations
+The makemigrations command creates (but does not apply) the migrations for all applications installed in your project (you can specify the application name as well to just run a migration for a single project). 
+py manage.py makemigrations
+The migrate command actually applies the migrations to your database (Django tracks which ones have been added to the current database).
+py manage.py migrate
+
+Running the website
+py manage.py runserver --insecure
+
+Getting your website ready to publish
+set DJANGO_DEBUG=False
+py manage.py check --deploy
+
+How to run the tests:
+py manage.py test
