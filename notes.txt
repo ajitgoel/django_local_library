@@ -20,3 +20,6 @@ py manage.py check --deploy
 
 How to run the tests:
 py manage.py test
+
+create Requirements file:
+pip3 freeze > requirements.txt
